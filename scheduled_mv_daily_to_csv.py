@@ -53,29 +53,29 @@ front_units = 36
 SYMBOLS = {
 
     # GAS — ICE TTF
-    **{f"/TFN<{i}>":         {"commodity": "gas",   "exchange": "ICE", "area": "Netherlands", "strip": "month",   "product": "TTF",      "description": f"TTF front {i+1} month"}   for i in range(front_units)},
-    **{f"/TFN_QUARTER<{i}>": {"commodity": "gas",   "exchange": "ICE", "area": "Netherlands", "strip": "quarter", "product": "TTF",      "description": f"TTF front {i+1} quarter"} for i in range(front_units)},
-    **{f"/TFN_YEAR<{i}>":    {"commodity": "gas",   "exchange": "ICE", "area": "Netherlands", "strip": "cal",     "product": "TTF",      "description": f"TTF front {i+1} cal"}     for i in range(front_units)},
+    **{f"/TFN<{i}>":         {"commodity": "gas",   "exchange": "ICE", "area": "NL", "strip": "month",   "product": "TTF",      "description": f"TTF front {i+1} month"}   for i in range(front_units)},
+    **{f"/TFN_QUARTER<{i}>": {"commodity": "gas",   "exchange": "ICE", "area": "NL", "strip": "quarter", "product": "TTF",      "description": f"TTF front {i+1} quarter"} for i in range(front_units)},
+    **{f"/TFN_YEAR<{i}>":    {"commodity": "gas",   "exchange": "ICE", "area": "NL", "strip": "cal",     "product": "TTF",      "description": f"TTF front {i+1} cal"}     for i in range(front_units)},
 
     # POWER — EEX Spain Baseload (months start at <1>)
-    **{f"/E.FEB_WEEK<{i}>":  {"commodity": "power", "exchange": "EEX", "area": "Spain",       "strip": "week",    "product": "Baseload", "description": f"Spain Baseload power front {i+1} week"}    for i in range(front_units)},
-    **{f"/E.FEW_WEEK<{i}>":  {"commodity": "power", "exchange": "EEX", "area": "Spain",       "strip": "weekend", "product": "Baseload", "description": f"Spain Baseload power front {i+1} weekend"} for i in range(front_units)},
-    **{f"/E.FEBM<{i+1}>":    {"commodity": "power", "exchange": "EEX", "area": "Spain",       "strip": "month",   "product": "Baseload", "description": f"Spain Baseload power front {i+1} month"}   for i in range(front_units)},
-    **{f"/E.FEBQ<{i}>":      {"commodity": "power", "exchange": "EEX", "area": "Spain",       "strip": "quarter", "product": "Baseload", "description": f"Spain Baseload power front {i+1} quarter"} for i in range(front_units)},
-    **{f"/E.FEBY<{i}>":      {"commodity": "power", "exchange": "EEX", "area": "Spain",       "strip": "cal",     "product": "Baseload", "description": f"Spain Baseload power front {i+1} cal"}     for i in range(front_units)},
+    **{f"/E.FEB_WEEK<{i}>":  {"commodity": "power", "exchange": "EEX", "area": "SP",       "strip": "week",    "product": "Baseload", "description": f"Spain Baseload power front {i+1} week"}    for i in range(front_units)},
+    **{f"/E.FEW_WEEK<{i}>":  {"commodity": "power", "exchange": "EEX", "area": "SP",       "strip": "weekend", "product": "Baseload", "description": f"Spain Baseload power front {i+1} weekend"} for i in range(front_units)},
+    **{f"/E.FEBM<{i+1}>":    {"commodity": "power", "exchange": "EEX", "area": "SP",       "strip": "month",   "product": "Baseload", "description": f"Spain Baseload power front {i+1} month"}   for i in range(front_units)},
+    **{f"/E.FEBQ<{i}>":      {"commodity": "power", "exchange": "EEX", "area": "SP",       "strip": "quarter", "product": "Baseload", "description": f"Spain Baseload power front {i+1} quarter"} for i in range(front_units)},
+    **{f"/E.FEBY<{i}>":      {"commodity": "power", "exchange": "EEX", "area": "SP",       "strip": "cal",     "product": "Baseload", "description": f"Spain Baseload power front {i+1} cal"}     for i in range(front_units)},
 
     # EUA — ICE monthly contracts
     **{f"/ECF<{i+1}>":       {"commodity": "EUA",   "exchange": "ICE", "area": "EU",          "strip": "month",   "product": "EUA",      "description": f"EUAs front {i+1} month"}   for i in range(front_units)},
 
     # GAS — EEX PVB (Spain)
-    **{f"/E.GEBM<{i}>": {"commodity": "gas", "exchange": "EEX", "area": "Spain",       "strip": "month",   "product": "PVB", "description": f"EEX PVB gas front {i+1} month"}   for i in range(front_units)},
-    **{f"/E.GEBQ<{i}>": {"commodity": "gas", "exchange": "EEX", "area": "Spain",       "strip": "quarter", "product": "PVB", "description": f"EEX PVB gas front {i+1} quarter"} for i in range(front_units)},
-    **{f"/E.GEBY<{i}>": {"commodity": "gas", "exchange": "EEX", "area": "Spain",       "strip": "cal",     "product": "PVB", "description": f"EEX PVB gas front {i+1} cal"}     for i in range(front_units)},
+    **{f"/E.GEBM<{i}>": {"commodity": "gas", "exchange": "EEX", "area": "SP",       "strip": "month",   "product": "PVB", "description": f"EEX PVB gas front {i+1} month"}   for i in range(front_units)},
+    **{f"/E.GEBQ<{i}>": {"commodity": "gas", "exchange": "EEX", "area": "SP",       "strip": "quarter", "product": "PVB", "description": f"EEX PVB gas front {i+1} quarter"} for i in range(front_units)},
+    **{f"/E.GEBY<{i}>": {"commodity": "gas", "exchange": "EEX", "area": "SP",       "strip": "cal",     "product": "PVB", "description": f"EEX PVB gas front {i+1} cal"}     for i in range(front_units)},
 
     # GAS — EEX TTF (Netherlands, via EEX)
-    **{f"/E.G3BM<{i}>": {"commodity": "gas", "exchange": "EEX", "area": "Netherlands", "strip": "month",   "product": "TTF", "description": f"EEX TTF gas front {i+1} month"}   for i in range(front_units)},
-    **{f"/E.G3BQ<{i}>": {"commodity": "gas", "exchange": "EEX", "area": "Netherlands", "strip": "quarter", "product": "TTF", "description": f"EEX TTF gas front {i+1} quarter"} for i in range(front_units)},
-    **{f"/E.G3BY<{i}>": {"commodity": "gas", "exchange": "EEX", "area": "Netherlands", "strip": "cal",     "product": "TTF", "description": f"EEX TTF gas front {i+1} cal"}     for i in range(front_units)},
+    **{f"/E.G3BM<{i}>": {"commodity": "gas", "exchange": "EEX", "area": "NL", "strip": "month",   "product": "TTF", "description": f"EEX TTF gas front {i+1} month"}   for i in range(front_units)},
+    **{f"/E.G3BQ<{i}>": {"commodity": "gas", "exchange": "EEX", "area": "NL", "strip": "quarter", "product": "TTF", "description": f"EEX TTF gas front {i+1} quarter"} for i in range(front_units)},
+    **{f"/E.G3BY<{i}>": {"commodity": "gas", "exchange": "EEX", "area": "NL", "strip": "cal",     "product": "TTF", "description": f"EEX TTF gas front {i+1} cal"}     for i in range(front_units)},
 
 #     # CO2 — ICE Dec contracts 2020–2027
 #     **{
