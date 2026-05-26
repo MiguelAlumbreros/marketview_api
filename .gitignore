@@ -1,0 +1,9 @@
+.env
+pwd.txt
+output.csv
+job.log
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.claude/
